@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+#  here we are saying that eureka itself will not get registered
+#  in service registry since it is also a microservice
+#  hover on register to get more details
+  client:
+    register-with-eureka: false
+    fetch-registry: false
