@@ -16,13 +16,13 @@ public class RatingController {
     @Autowired
     RatingService ratingService;
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<Rating> createRating(@RequestBody Rating rating) {
         Rating newRating= this.ratingService.createRating(rating);
         return new ResponseEntity<Rating>(newRating, HttpStatus.CREATED);
     }
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<List<Rating>> getALlRatings(){
         List<Rating> allRatings= this.ratingService.getAllRatings();
         return new ResponseEntity<List<Rating>>(allRatings,HttpStatus.OK);

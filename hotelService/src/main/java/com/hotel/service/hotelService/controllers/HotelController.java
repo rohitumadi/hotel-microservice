@@ -14,7 +14,7 @@ import java.util.List;
 public class HotelController {
     @Autowired
     private  HotelService hotelService;
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<Hotel> createHotel(@RequestBody Hotel hotel) {
 
         Hotel newHotel=this.hotelService.createHotel(hotel);
@@ -22,7 +22,7 @@ public class HotelController {
 
     }
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<List<Hotel>> getAllHotels() {
         List<Hotel> hotelList=this.hotelService.getAllHotels();
         return  new ResponseEntity<List<Hotel>>(hotelList,HttpStatus.OK);

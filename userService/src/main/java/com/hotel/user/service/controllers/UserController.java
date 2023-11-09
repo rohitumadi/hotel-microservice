@@ -16,7 +16,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
         User newUser = this.userService.saveUser(user);
         return new ResponseEntity<User>(newUser, HttpStatus.CREATED);
@@ -30,7 +30,7 @@ public class UserController {
         return  new ResponseEntity<User>(user, HttpStatus.OK);
     }
 
-    @GetMapping("/")
+    @GetMapping
     public ResponseEntity<List<User>> getAllUser(){
         List<User> users=this.userService.getAllUsers();
         return  new ResponseEntity<List<User>>(users, HttpStatus.OK);
