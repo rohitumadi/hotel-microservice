@@ -9,6 +9,6 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: https://github.com/rohitumadi/hotel-microservice
           clone-on-start: true
 
