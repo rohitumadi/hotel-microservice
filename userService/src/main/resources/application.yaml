@@ -10,6 +10,10 @@ spring:
     password: Rohit@123
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+#default is dev
+#  profiles:
+#    active: dev
+
 
   jpa:
     hibernate:
@@ -18,15 +22,28 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
+  config:
+    import: optional:configserver:http://localhost:8085
 
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-  instance:
-    prefer-ip-address: true
+#import=optional:configserver:
+#When you use optional:configserver:, it means that if the Config Server
+# is available, Spring Boot will attempt to load configuration properties
+# from it. If the Config Server is not available or encounters an issue,
+# it won't prevent the application from starting. The application will
+# continue to start with the local configuration or any other configuration
+# sources you might have.
+
+
+
+
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka
+#  instance:
+#    prefer-ip-address: true
 
 
 

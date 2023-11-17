@@ -13,4 +13,5 @@ spring:
           clone-on-start: true
           search-paths:
             - DEV
+            - PROD
 
