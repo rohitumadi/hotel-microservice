@@ -33,4 +33,12 @@ eureka:
     prefer-ip-address: true
 
 
+okta:
+  oauth2:
+    issuer: https://dev-53645436.okta.com/oauth2/default
+    audience: api://default
+    client-id: 0oadcu5npvRo4oHtK5d7
+    client-secret: _ZuOpCAnRuXBX4IXF5kbqBkfeZcy5VFUQx8R2KL-7rvRl68QYMH-peBgcVj47yjr
+    scopes: openid,profile,email,offline_access
+#    redirect-uri: /login/oauth2/code/okta
 
