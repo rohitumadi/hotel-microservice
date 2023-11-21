@@ -30,6 +30,7 @@ spring:
           issuer-uri: https://dev-53645436.okta.com/oauth2/default
       client:
         registration:
+#          ClientRegistrationId is my-internal-client
           my-internal-client:
             provider: okta
             authorizationGrantType: client_credentials

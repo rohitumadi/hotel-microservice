@@ -55,7 +55,7 @@ public class UserServiceImpl implements UserService {
 
 //            ResponseEntity<Hotel> forEntity=restTemplate.getForEntity(hotelsURL, Hotel.class,userId);
 //            Hotel hotel = forEntity.getBody();
-            //calling other service using feign client 
+            //calling other service using feign client
             Hotel hotel =hotelService.getHotel(rating.getHotelId());
 
 //            logger.info("response status code:{}",forEntity.getStatusCode());
